@@ -19,7 +19,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '14'  # Specify the Node.js version
+        node-version: '14'
 
     - name: Cache Node.js modules
       uses: actions/cache@v3
@@ -34,3 +34,15 @@ jobs:
 
     - name: Build project
       run: npm run build
+
+    - name: SonarCloud Scan
+      uses: SonarSource/sonarcloud-github-action@v2
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      with:
+        args: >
+          -Dsonar.projectKey=salmanbytewrap_NodeJs-Repository-Pattern
+          -Dsonar.organization=salmanbytewrap
+          -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info  # Update if using coverage
+
+    
