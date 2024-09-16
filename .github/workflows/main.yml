@@ -42,7 +42,7 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       with:
         args: >
-          -Dsonar.projectKey=NodeJs-Repository-Pattern
+          -Dsonar.projectKey=salmanbytewrap_NodeJs-Repository-Pattern
           -Dsonar.organization=salmanbytewrap
           -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
 
