@@ -38,10 +38,11 @@ jobs:
     - name: SonarCloud Scan
       uses: SonarSource/sonarcloud-github-action@v2
       env:
+        GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       with:
         args: >
-          -Dsonar.projectKey=salmanbytewrap_NodeJs-Repository-Pattern
+          -Dsonar.projectKey=NodeJs-Repository-Pattern
           -Dsonar.organization=salmanbytewrap
           -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
 
