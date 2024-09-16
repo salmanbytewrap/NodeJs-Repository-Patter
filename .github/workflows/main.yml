@@ -43,6 +43,6 @@ jobs:
         args: >
           -Dsonar.projectKey=salmanbytewrap_NodeJs-Repository-Pattern
           -Dsonar.organization=salmanbytewrap
-          -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info  # Update if using coverage
+          -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
 
     
